@@ -1,0 +1,218 @@
+.card{
+
+     /* background-color: aquamarine transparent 50% */
+     position: relative;
+    height: 270px;
+    
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    width: 170px;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    align-items: center;
+    /* padding: 10px; */
+    /* margin: 0 auto; */
+    /* background: lightslategray; */
+background-color: rgb(214 9 9);
+    border: 1px solid black;
+    /* text-decoration: none; */
+    margin: 10px;
+}
+
+/* .card :hover {
+  color: #0b5e03;
+animation: vibrate-1 linear 0.8s both;
+
+} */
+
+/* .card::before {
+    content: '';
+    background: radial-gradient(black 33%, transparent 33%);
+    background-size: 3px 3px;
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: -1;
+} */
+
+.tipos{
+    display: flex;
+    margin-top: 30px;
+    height: 128px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.tiposH5{
+    color: black;
+    margin-top: 30px;
+    margin-bottom: 0%;
+    width: 100%;
+    display: flex;
+    /* height: 100px; */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tiposH5 p{
+    margin-inline: 4px;
+    margin-block: 2px;
+    padding: 3px;
+    background-color: rgb(255 189 0);
+    /* border: 1px solid #000; */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row-reverse;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-weight: bold;
+    /* color: white; */
+    font-size: smaller;
+    /* margin: 10px; */
+    /* align-items: center; */
+}
+
+/* h5{
+margin: 5px;
+} */
+
+ a:link, a:visited, a:active {
+            text-decoration:none;
+            height:0px;
+            
+          }
+   a :hover{
+
+/* animation: vibrate-1  linear 0.8s  none; */
+   }       
+
+img{
+     width: 100px;
+       /* width: 200px; */
+  height: 100px;
+}
+
+
+
+ul{
+     margin: none;
+}
+
+/* .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+} */
+
+
+.imgPpal{
+width: 100px;
+  height: 100px;
+  border: 5px solid white;
+  border-radius: 50%;
+  margin-top: calc(-40px  -50px);
+  background-color: white;
+     margin-inline: auto;
+    /* margin-top: 15px; */
+}
+
+.imgPpal :hover{
+animation: vibrate-1  linear 0.8s  none;
+
+}
+
+
+.cardName{
+
+background-color: white;
+    background-color: white;
+    width: 170px;
+    height: 140px;
+    margin-top: -80px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    /* display: flex; */
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.attack {
+
+    /* margin-left: 15px; */
+    margin-top: -20px;
+    margin-inline: auto;
+    /* color: rgb(2, 2, 2); */
+    background-color: rgb(0 0 0);
+    display: flex;
+    /* flex-direction: column; */
+    padding: 3px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    font-size: smaller;
+}
+
+
+
+
+
+.powerT{
+     /* font-size: 25px; */
+     /* display:fle */
+     margin:0px;
+}
+
+
+.power{
+height: fit-content;
+    /* font-size: larger; */
+    margin-inline: 5px;
+    margin-block: 0px;
+}
+
+
+
+/* h3{
+font-family: impact, sans-serif;
+font-size: 18px;
+/* font-weight: bold; */
+/* letter-spacing: 3.4pt;
+color: yellow;
+} */ 
+
+
+
+@keyframes vibrate-1 {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}

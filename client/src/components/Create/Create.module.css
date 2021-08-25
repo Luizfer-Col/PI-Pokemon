@@ -1,0 +1,198 @@
+form{
+width: 300px;
+    padding: 16px;
+    border-radius: 10px;
+    margin-inline: auto;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    background-color: rgb(255, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label{
+	width:72px;
+	font-weight:bold;
+	display:inline-block;
+}
+
+form input[type="text"], [type="number"]{
+	width:200px;
+	padding:8px 8px;
+	margin-top:10px;
+	border:1px solid #000;
+	border-radius:20px;
+	display:block;
+	color:rgb(0, 0, 0);
+	background-color:rgb(255, 255, 255);
+         text-align: center;
+             font-size: medium;
+} 
+
+
+ form ::placeholder{
+     color: rgb(170, 170, 170);
+     align-content: center;
+}
+
+form button[type="submit"]:hover{
+	cursor:pointer;
+}
+
+.titulo{
+
+    color: #ffff00;
+
+}
+.tiposForm{
+     display: flex;
+     align-items: center;
+     margin: 10px
+}
+
+
+
+.selectCss {
+    margin-top: 15px;
+    display: block;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+    /* color: rgb(2 2 2); */
+     color: rgb(170, 170, 170);
+
+    line-height: 1.3;
+    padding: .4em 1.4em .3em .8em;
+    /* width: 400px; */
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    /* border: 1px solid #aaa; */
+    box-shadow: 0 1px 0 1px rgb(0 0 0 / 3%);
+    border-radius: 20px;
+    -webkit-appearance: none;
+    appearance: none;
+
+}
+.selectCss::-ms-expand {
+ display: none;
+}
+.selectCss:hover {
+ border-color: #888;
+}
+.selectCss:focus {
+ border-color: #aaa;
+ box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+ box-shadow: 0 0 0 3px -moz-mac-focusring;
+ color: #222; 
+ outline: none;
+}
+.selectCss option {
+ font-weight:normal;
+}
+
+
+
+.btnTipo{
+     padding:5px;
+     background-color: yellow;
+    /* border: 1px solid #000; */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    width: fit-content;
+    font-weight: bold;
+    /* color: white; */
+    font-size: smaller;
+    margin: 10px;
+    align-items: center;
+}
+
+.detTipo{
+     margin: 0px
+}
+
+.btnDelTipo{
+     /* width: 7px; */
+     /* height:15px; */
+    width: 7px;
+    height: 15px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    color: white;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.containerTipos{
+     display: flex;
+     flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+.enviar {
+     margin:5px;
+	box-shadow: 3px 4px 0px 0px #e3a600;
+	background:linear-gradient(to bottom, #fbff00 5%, #cfb000 100%);
+	background-color:#fbff00;
+	border-radius:15px;
+	border:1px solid #fffd8f;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
+}
+.enviar:hover {
+	background:linear-gradient(to bottom, #cfb000 5%, #fbff00 100%);
+	background-color:#cfb000;
+}
+.enviar:active {
+	position:relative;
+	top:1px;
+}
+
+/* .titulo{
+     color:
+} */
+
+/* <a href="#" class="myButton">grey</a> */
+.clean {
+     margin:5px;
+	box-shadow: 3px 4px 0px 0px #9e9e9e;
+	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	background-color:#ededed;
+	border-radius:15px;
+	border:1px solid #d6bcd6;
+	display:inline-block;
+	cursor:pointer;
+	color:#757575;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
+}
+.clean:hover {
+	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+	background-color:#bab1ba;
+}
+.clean:active {
+	position:relative;
+	top:1px;
+}
+
+.cerrar{
+margin-left: 280px;
+     border-radius: 5px;
+}

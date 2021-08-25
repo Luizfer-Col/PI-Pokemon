@@ -1,0 +1,34 @@
+.fondo {
+	background-color: black;
+	display: flex;
+	justify-content: space-evenly;
+	height: 70px;
+	align-items: center;
+}
+.containerNav {
+	width: 850px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.fondo a {
+	text-decoration: none;
+	color: inherit;
+	font-size: 14px;
+	color: white;
+	display: inline-block;
+	/* width: 10%; */
+	padding: 20px 10px;
+	background-color: #000;
+	border: 1px solid #000;
+	text-align: center;
+	color: #ff9c00;
+	font-weight: bold;
+}
+
+a:hover {
+	background-color: #ff9c00;
+	color: rgb(0, 0, 0);
+}

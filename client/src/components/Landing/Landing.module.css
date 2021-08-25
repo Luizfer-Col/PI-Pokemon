@@ -1,0 +1,82 @@
+.landing{
+     background: url("imagenes/001Landing.jpg") no-repeat 50% 50% ;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  display: table;
+  margin: auto;
+  top: 0;
+}
+
+.landingInner {
+  width: 100%;
+  height: 700px;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+
+.content{
+       width:100px;
+  height: 100px;
+     margin-inline:auto;
+     margin-top: -43px;
+     background-color: rgb(247, 189, 0);
+  border-radius: 50%;
+  border: 3px solid;
+
+}
+.content :hover {
+  color: #d30000;
+animation: vibrate-1 0.3s linear infinite both;
+
+}
+
+ .go{
+      margin-top: 15px ;
+      margin-right: 4px ;
+ }
+.content a {
+     
+       font-size: 200%;
+  /* border-radius: 50%; */
+  /* width:100px;
+  height: 100px; */
+  text-decoration: none;
+  color: #000000;
+  /* font-family: 'Century Gothic', sans-serif; */
+  font-weight: bold;
+  /* border: 3px solid; */
+  /* padding-bottom: 27px ; */
+}
+
+.content a:hover {
+  color: #f01506;
+animation: myAnim 2s ease 0s 1 normal forwards;
+
+}
+
+@keyframes vibrate-1 {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+
+
+

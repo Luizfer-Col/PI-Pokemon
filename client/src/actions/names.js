@@ -1,0 +1,9 @@
+export const  GET_POKEMONS = "GET_POKEMONS"
+export const  GET_TYPES = "GET_TYPES"
+export const FILTER_BY_TYPE = "FILTER_BY_TYPE";
+export const FILTER_BY_LOCALE = "BY_LOCALE";
+export const GET_DETAILS = "GET_DETAILS";
+export const GET_BY_NAME = "GET_BY_NAME";
+export const POST = "POST";
+export const ORDER = "ORDER";
+export const SET_ORDER = "SET_ORDER";

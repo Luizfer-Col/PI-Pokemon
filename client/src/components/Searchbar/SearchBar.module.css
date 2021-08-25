@@ -1,0 +1,41 @@
+.search{
+    display: flex;
+    justify-content: center;
+    width: 850px;
+    margin-inline: auto;
+    margin-top: -20px;
+}
+
+
+.buscar{
+    padding: 7px 10px 7px 30px;
+    outline: none;
+    background: transparent;
+    /* border-bottom-color: black; */
+    /* border-top: black; */
+    /* border-left: black; */
+    /* border-right: black; */
+    margin: 15px;
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+}
+
+
+
+::placeholder{
+     color: rgb(0, 0, 0);
+     font-weight: bold;
+     text-align: center;
+}
+
+.btnBuscar{
+border-radius: 15px;
+    cursor: pointer;
+    background: black;
+    color: white;
+    margin-block: 13px;
+
+}

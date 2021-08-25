@@ -1,0 +1,98 @@
+/* .homePpal{
+     background-color: blue;
+} */
+
+
+.TodosLosFIltros{
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    width: 750px;
+    margin-inline: auto;
+    background-color: #000000cf;
+    height: 20px;
+    border-radius: 10px;
+    margin-top: -20px;
+    align-items: center;
+}
+ .selectTodos{
+    width: auto;
+    color: #222;
+    background-color: #ffbd00;
+    font-weight: bold;
+    border-radius: 10px;
+
+ }
+  
+ .resetBtn{
+        border-radius: 10px;
+    background-color: #d60909;
+    color: white;
+    cursor: pointer;
+ }
+
+
+ .letras{
+      color: white;
+ }
+
+
+
+.table{
+     /* background-color: yellow; */
+     width:850px;
+     height:580px;
+         display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+}
+
+pCard{
+color: violet;
+
+     background-color: yellow;
+}
+
+
+
+
+
+
+
+
+
+
+.pagination {
+display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    cursor: pointer;
+    height: min-content;
+    width: 650px;
+    margin-inline: auto;
+    margin-bottom: 50px
+}
+
+.pagination a {
+    padding-block: 5px;
+    padding-inline: 10px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    color: #000000;
+    margin-block: 0%;
+}
+
+.pagination__link {
+  font-weight: bold;
+}
+
+.pagination__linkActive a {
+  color: #fff;
+  background: #030303;
+}
+
+.pagination__linkDisabled a {
+  color: rgb(143, 143, 143);
+  border: 1px solid rgb(143, 143, 143);
+}
