@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addPokemon, getTypes } from "../../actions/index.js";
 import Style from "./Create.module.css";
-
 
 export default function Create() {
 	const dispatch = useDispatch();
 	const history = useHistory();
 	const types = useSelector((state) => state.types);
 
-	const [myTypeSelect, setMyTypeSelect] = useState("");
-
+	const [myTypeSelect, setMyTypeSelect] = useState({
+		type: [],
+	});
 
 	const [input, setInput] = useState({
 		name: "",
@@ -25,38 +25,68 @@ export default function Create() {
 		type: [],
 	});
 
-
+	function handleSubmit(e) {
+		e.preventDefault();
+		// let toSend =
+		// console.log("input LINEA 33", input);
+		if (input.name.length < 1) {
+			alert("Introduce todos los datos");
+		} else {
+			console.log(input, "input dentro del handle linea 36");
+			dispatch(addPokemon(input));
+			alert("Pokemon creado!");
+			setInput({
+				name: "",
+				height: "",
+				weight: "",
+				hp: "",
+				attack: "",
+				defense: "",
+				speed: "",
+				sprite: "",
+				type: [],
+			});
+			history.push("/home");
+		}
+	}
 
 	function handleChange(e) {
-         
+		e.preventDefault();
 		setInput({
 			...input,
 			[e.target.name]: e.target.value,
 		});
-
 	}
 
-
-
-     function handleSelect(e) {
-
-          if(input.type.includes(e.target.value)===false){
-		setInput({
-			...input,
-			type: [...input.type, e.target.value],
-		});
-               setMyTypeSelect(e.target.value)
-     }
-     }
-
-     function handleSubmit(e) {
+	function handleSelect(e) {
 		e.preventDefault();
-          console.log("input", input);
-          if(input.name.length <1){
-               alert("Introduce todos los datos")
-          } else{
-		dispatch(addPokemon(input));
-		alert("Pokemon creado!");
+
+		if (
+			myTypeSelect.type.includes(e.target.value) === false &&
+			myTypeSelect.type.length < 2
+		) {
+			setMyTypeSelect({
+				type: [...myTypeSelect.type, e.target.value],
+			});
+			setInput({
+				...input,
+				type: [...myTypeSelect.type, e.target.value],
+			});
+		} else {
+			alert("No se pueden seleccionar mas de dos tipos");
+		}
+	}
+
+	function handleDelete(i, e) {
+		console.log(e, "eeeeeeee");
+		e.preventDefault();
+		setMyTypeSelect({
+			type: myTypeSelect.type.filter((type) => type !== i),
+		});
+	}
+
+	function handleClear(e) {
+		e.preventDefault();
 		setInput({
 			name: "",
 			height: "",
@@ -66,43 +96,16 @@ export default function Create() {
 			defense: "",
 			speed: "",
 			sprite: "",
+			// type: [],
+		});
+		setMyTypeSelect({
 			type: [],
 		});
-		history.push("/home");
-          }
+	}
 
-     }
-
-     function handleDelete(e){
-          console.log(e)
-          // e.preventDefault();
-          setInput({
-			...input,
-			type: input.type.filter((type) => type !== e),
-		});
-          setMyTypeSelect("");
-     }
-
-     function handleClear(){
-	setInput({
-		name: "",
-		height: "",
-		weight: "",
-		hp: "",
-		attack: "",
-		defense: "",
-		speed: "",
-		sprite: "",
-		type: [],
-	});
-     setMyTypeSelect("")
-
-     }
-
-     useEffect(() => {
+	useEffect(() => {
 		dispatch(getTypes());
-     }, [dispatch]);
-
+	}, [dispatch]);
 
 	return (
 		<div>
@@ -123,7 +126,7 @@ export default function Create() {
 						placeholder="Nombre"
 						name="name"
 						onChange={(e) => handleChange(e)}
-						required
+						// required
 					></input>
 					{/* <span className={Style.placeholder}>Nombre</span> */}
 				</div>
@@ -135,7 +138,7 @@ export default function Create() {
 						placeholder="Altura"
 						name="height"
 						onChange={(e) => handleChange(e)}
-						required
+						// required
 					></input>
 				</div>
 				<div>
@@ -146,7 +149,7 @@ export default function Create() {
 						placeholder="Peso"
 						name="weight"
 						onChange={(e) => handleChange(e)}
-						required
+						// required
 					></input>
 				</div>
 				<div>
@@ -157,7 +160,7 @@ export default function Create() {
 						placeholder="Salud"
 						name="hp"
 						onChange={(e) => handleChange(e)}
-						required
+						// required
 					></input>
 				</div>
 				<div>
@@ -168,7 +171,7 @@ export default function Create() {
 						placeholder="Ataque"
 						name="attack"
 						onChange={(e) => handleChange(e)}
-						required
+						// required
 					></input>
 				</div>
 				<div>
@@ -179,7 +182,7 @@ export default function Create() {
 						placeholder="Defensa"
 						name="defense"
 						onChange={(e) => handleChange(e)}
-						required
+						// required
 					></input>
 				</div>
 				<div>
@@ -190,7 +193,7 @@ export default function Create() {
 						placeholder="Velocidad"
 						name="speed"
 						onChange={(e) => handleChange(e)}
-						required
+						// required
 					></input>
 				</div>
 				<div>
@@ -201,7 +204,6 @@ export default function Create() {
 						placeholder="Imagen (opc)"
 						name="sprite"
 						onChange={(e) => handleChange(e)}
-						
 					></input>
 				</div>
 				<div className={Style.tiposForm}>
@@ -211,7 +213,7 @@ export default function Create() {
 						className={Style.selectCss}
 						onChange={(e) => handleSelect(e)}
 						// required
-						value={myTypeSelect}
+						value={myTypeSelect.type}
 					>
 						<option value="">
 							Selecciona el Tipo ↓
@@ -224,7 +226,7 @@ export default function Create() {
 					</select>
 				</div>
 				<div className={Style.containerTipos}>
-					{input.type?.map((i) => {
+					{myTypeSelect.type?.map((i) => {
 						if (i.length > 0)
 							return (
 								<div className={Style.btnTipo}>
@@ -232,7 +234,11 @@ export default function Create() {
 										className={
 											Style.btnDelTipo
 										}
-										onClick={() =>handleDelete(i)
+										onClick={(e) =>
+											handleDelete(
+												i,
+												e
+											)
 										}
 									>
 										x
@@ -245,13 +251,15 @@ export default function Create() {
 										{i}
 									</p>
 								</div>
-							); return ""
+							);
+						return "";
 					})}
 				</div>
+				{/* ///////////////////// */}
 				<div>
 					<br />
 					<button
-						onClick={handleClear}
+						onClick={(e) => handleClear(e)}
 						className={Style.clean}
 					>
 						Limpiar
